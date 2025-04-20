@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import styles from './styles/header.module.scss';
 import companyLogo from '../assets/images/companyLogo2-removebg-preview-COPY.png';
 
@@ -8,10 +8,9 @@ const Header = () => {
   return (
     <div className="bg-white">
       <header className="fixed inset-x-0 top-0 z-50">
-        <nav className={`flex items-center justify-between lg:justify-evenly ${styles.headerContainer}`} aria-label="Global">
+        <nav className={`flex items-center justify-between lg:justify-evenly fixed inset-x-0 top-0 z-50 bg-white/60 backdrop-blur-md shadow-sm ${styles.headerContainer}`} aria-label="Global">
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
               <img className="h-25 w-auto" src={companyLogo} alt="Logo" />
             </a>
           </div>

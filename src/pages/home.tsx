@@ -1,8 +1,11 @@
-
-const home = () => {
+import HeroSection from "../components/heroSection";
+const Home = () => {
   return (
-    <div></div>
+    <div>
+        <HeroSection />
+
+    </div>
   )
 }
 
-export default home
+export default Home

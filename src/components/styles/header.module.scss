@@ -1,8 +1,8 @@
 /* header.module.scss */
 .headerContainer {
     padding: var(--main-padding);
-    margin-left: var(--main-margin-left);
-    margin-right: var(--main-margin-left);
+    padding-left: var(--main-margin-left);
+    padding-right: var(--main-margin-left);
   
     @media (max-width: 768px) {
       margin-left: 1rem;
