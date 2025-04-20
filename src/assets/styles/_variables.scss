@@ -1,0 +1,13 @@
+:root {
+    --main-margin-left: 300px;
+    --main-padding: 2rem;
+  }
+  
+  // Utility classes
+  .margin-left-global {
+    margin-left: var(--main-margin-left);
+  }
+  
+  .padding-global {
+    padding: var(--main-padding);
+  }

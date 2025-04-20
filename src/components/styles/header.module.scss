@@ -1,0 +1,28 @@
+/* header.module.scss */
+.headerContainer {
+    padding: var(--main-padding);
+    margin-left: var(--main-margin-left);
+    margin-right: var(--main-margin-left);
+  
+    @media (max-width: 768px) {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      padding: 1rem;
+    }
+  }
+  
+  .navLink {
+    font-weight: 400;
+    font-size: 2rem;
+    color: #0f172a;
+    text-decoration: none;
+  
+    &:hover {
+      color: #1d4ed8;
+    }
+  
+    @media (max-width: 768px) {
+      font-size: 1.25rem;
+    }
+  }
+  
