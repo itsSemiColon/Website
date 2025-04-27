@@ -1,6 +1,7 @@
 :root {
     --main-margin-left: 300px;
-    --main-padding: 2rem;
+    --main-padding: 1.5rem;
+    --main-paadding_left: 0rem;
   }
   
   // Utility classes
@@ -10,6 +11,7 @@
   
   .padding-global {
     padding: var(--main-padding);
+    padding-left: var(--main-paadding_left);
   }
 
     // fonts

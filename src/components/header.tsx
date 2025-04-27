@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import companyLogo from "../assets/images/companyLogo2-removebg-preview-COPY.png";
 import styles from './styles/header.module.scss';
 
 const Header = () => {
@@ -14,7 +13,7 @@ const Header = () => {
       <nav className="px-4 lg:px-6 py-1 w-full">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl padding-global">
           {/* Logo */}
-          <a href="/" className="flex items-center">
+          <a href="/" className="flex items-center ps-5">
           <img decoding="async" width="100" height="286" sizes="105px" srcSet="https://framerusercontent.com/images/LtJOacjpCfrAdQJhzULOxsNXP8.png?scale-down-to=512 512w,https://framerusercontent.com/images/LtJOacjpCfrAdQJhzULOxsNXP8.png 768w" src="https://framerusercontent.com/images/LtJOacjpCfrAdQJhzULOxsNXP8.png?scale-down-to=512" alt=""/>
             {/* <img
               src={companyLogo}

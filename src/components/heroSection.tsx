@@ -2,7 +2,7 @@ import styles from './styles/hero.module.scss';
 
 const HeroSection = () => {
   return (
-    <section className={styles.heroSection}>
+    <section className={`${styles.heroSection} padding-global`}>
       <div className={styles.heroGrid}>
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>
