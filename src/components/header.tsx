@@ -1,56 +1,103 @@
-import  { useState } from 'react';
+import { useState } from 'react';
+import companyLogo from "../assets/images/companyLogo2-removebg-preview-COPY.png";
 import styles from './styles/header.module.scss';
-import companyLogo from '../assets/images/companyLogo2-removebg-preview-COPY.png';
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(prevState => !prevState);
+  };
 
   return (
-    <div className="bg-white">
-      <header className="fixed inset-x-0 top-0 z-50">
-        <nav className={`flex items-center justify-between lg:justify-evenly fixed inset-x-0 top-0 z-50 bg-white/60 backdrop-blur-md shadow-sm ${styles.headerContainer}`} aria-label="Global">
-          <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
-              <img className="h-25 w-auto" src={companyLogo} alt="Logo" />
-            </a>
-          </div>
+    <header className={styles.header}>
+      <nav className="px-4 lg:px-6 py-1 w-full">
+        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl padding-global">
+          {/* Logo */}
+          <a href="/" className="flex items-center">
+          <img decoding="async" width="100" height="286" sizes="105px" srcSet="https://framerusercontent.com/images/LtJOacjpCfrAdQJhzULOxsNXP8.png?scale-down-to=512 512w,https://framerusercontent.com/images/LtJOacjpCfrAdQJhzULOxsNXP8.png 768w" src="https://framerusercontent.com/images/LtJOacjpCfrAdQJhzULOxsNXP8.png?scale-down-to=512" alt=""/>
+            {/* <img
+              src={companyLogo}
+              alt="Company Logo"
+              width={100}
+              height={50}
+              className={styles.logo}
+            /> */}
+          </a>
 
-          {/* Hamburger */}
-          <div className="lg:hidden">
+          {/* Right Buttons */}
+          <div className="flex items-center lg:order-2">
+            <button className={`${styles.getStartedBtn} font-medium rounded-lg px-4 lg:px-5 py-2 lg:py-2.5 mr-2`}>
+              Get started
+            </button>
             <button
               type="button"
-              onClick={() => setMenuOpen(!menuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 focus:outline-none"
+              className={`${styles.hamburgerBtn} inline-flex items-center p-2 ml-1 text-sm rounded-lg lg:hidden`}
+              onClick={toggleMobileMenu}
+              aria-controls="mobile-menu"
+              aria-expanded={isMobileMenuOpen}
             >
-              <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                {menuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                )}
+              <span className="sr-only">Open main menu</span>
+              {/* Hamburger Icon */}
+              <svg
+                className={`w-6 h-6 ${isMobileMenuOpen ? 'hidden' : 'block'}`}
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              {/* Close Icon */}
+              <svg
+                className={`w-6 h-6 ${isMobileMenuOpen ? 'block' : 'hidden'}`}
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
               </svg>
             </button>
           </div>
 
-          {/* Desktop Links */}
-          <div className="hidden lg:flex lg:gap-x-12">
-            <a href="#" className={styles.navLink}>Home</a>
-            <a href="#" className={styles.navLink}>Services</a>
-            <a href="#" className={styles.navLink}>Contact Us</a>
-            <a href="#" className={styles.navLink}>Team</a>
+          {/* Navigation Menu */}
+          <div
+            className={`${
+              isMobileMenuOpen ? 'block' : 'hidden'
+            } w-full lg:flex lg:w-auto lg:order-1`}
+            id="mobile-menu"
+          >
+            <ul className={`${styles.navItems} flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0`}>
+              <li>
+                <a href="#services" className="block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0">
+                  Services
+                </a>
+              </li>
+              <li>
+                <a href="#plans" className="block py-2 pr-4 pl-3 lg:hover:bg-transparent lg:border-0 lg:p-0">
+                  Plans
+                </a>
+              </li>
+              <li>
+                <a href="#process" className="block py-2 pr-4 pl-3 lg:hover:bg-transparent lg:border-0 lg:p-0">
+                  Process
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="block py-2 pr-4 pl-3 lg:hover:bg-transparent lg:border-0 lg:p-0">
+                  Contact
+                </a>
+              </li>
+            </ul>
           </div>
-        </nav>
-
-        {/* Mobile Links */}
-        {menuOpen && (
-          <div className="lg:hidden px-4 pb-4 pt-2 bg-white shadow-md">
-            <a href="#" className="block py-2 text-lg text-gray-900">Home</a>
-            <a href="#" className="block py-2 text-lg text-gray-900">Services</a>
-            <a href="#" className="block py-2 text-lg text-gray-900">Team</a>
-          </div>
-        )}
-      </header>
-    </div>
+        </div>
+      </nav>
+    </header>
   );
 };
 

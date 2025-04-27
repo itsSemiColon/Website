@@ -1,28 +1,102 @@
-/* header.module.scss */
-.headerContainer {
-    padding: var(--main-padding);
-    padding-left: var(--main-margin-left);
-    padding-right: var(--main-margin-left);
-  
-    @media (max-width: 768px) {
-      margin-left: 1rem;
-      margin-right: 1rem;
-      padding: 1rem;
+@use "../../assets/styles/variables" as var;
+
+nav {
+  background-color: var.$color-background;
+  width: 100%;
+  font-family: var.$font-primary;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .navItems {
+    color: var.$color-heading;
+
+    li a {
+      transition: color 0.3s ease, background-color 0.3s ease;
+
+      &:hover {
+        color: var.$color-primary;
+      }
+
+      &.active {
+        color: var.$color-primary;
+        font-weight: 600;
+      }
     }
   }
-  
-  .navLink {
-    font-weight: 400;
-    font-size: 2rem;
-    color: #0f172a;
-    text-decoration: none;
-  
+
+  .getStartedBtn {
+    background-color: var.$color-primary;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 10;
+
     &:hover {
-      color: #1d4ed8;
+      background-color: var.$color-accent;
     }
-  
-    @media (max-width: 768px) {
-      font-size: 1.25rem;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(var.$color-primary, 0.3);
     }
   }
-  
+
+  .hamburgerBtn {
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    svg {
+      transition: fill 0.3s ease;
+    }
+
+    &:hover {
+      background-color: rgba(var.$color-secondary, 0.1);
+
+      svg {
+        fill: var.$color-accent;
+      }
+    }
+  }
+
+  .mobile-menu {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    background-color: var.$color-background;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    &.hidden {
+      transform: translateY(-10px);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    &.visible {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    ul {
+      padding: 1rem;
+
+      li a {
+        padding: 0.75rem 1rem;
+        display: block;
+        color: var.$color-heading;
+        transition: color 0.3s ease, background-color 0.3s ease;
+
+        &:hover {
+          color: var.$color-primary;
+          background-color: rgba(var.$color-secondary, 0.1);
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .mobile-menu {
+      display: none;
+    }
+  }
+}

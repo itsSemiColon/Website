@@ -11,3 +11,25 @@
   .padding-global {
     padding: var(--main-padding);
   }
+
+    // fonts
+  $font-primary: "Playfair Display", serif ;;
+
+  // colors
+  $color-primary: #F08A23;   // Main CTA (Button) Color
+  $color-secondary: #F3D949; // Secondary yellow
+  $color-accent: #C4551A;    // Red-orange accent
+  $color-deep-accent: #B6460F; // Darker red accent
+  $color-golden: #D9BA2A;    // Golden circle
+  $color-heading: #121212;   // Heading color (almost black)
+  $color-text: #777777;      // Paragraph text
+  $color-background: #fdf1ea; // Light background
+
+  // font sizes
+  $font-size-heading-large: 3.5rem; // around 56px
+  $font-size-heading-medium: 3rem;  // around 48px
+  $font-size-paragraph: 1.125rem;   // around 18px
+
+  // spacing (optional, common practice)
+  $spacing-section: 4rem;
+  $spacing-paragraph: 1.5rem;

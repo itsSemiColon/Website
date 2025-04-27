@@ -1,19 +1,40 @@
-import styles from "./styles/heroSection.module.scss";
+import styles from './styles/hero.module.scss';
 
 const HeroSection = () => {
   return (
-    <div className={styles.hero}>
-      <div className={styles.content}>
-        {/* You can put actual hero text/buttons here */}
-        <div>
-            
-            <h1 className="text-black">Grow Your Start <span style={{ color: '#FF6F61  ' }} className="U">U</span>p At An Early Stage or Scale Your Development Team With US </h1>
-            <p className="text-black">We are a custom software development company that assists you in converting your ideas into wonderful software solutions. With our customer centeric approch we build products that matters to users.</p>
-            <button type="button" className="text-white font-medium rounded-lg text-4xl " >Let's Talk</button>
-
+    <section className={styles.heroSection}>
+      <div className={styles.heroGrid}>
+        <div className={styles.heroContent}>
+          <h1 className={styles.heroTitle}>
+          We’re a software development company that helps bring imagination into reality.
+          </h1>
+          <p className={styles.heroSubtitle}>
+          Let's Architect Your Future, Together. Reliable Tech, Delivered.          </p>
+          <div className={styles.heroButtons}>
+            <a href="#" className={styles.getStartedBtn}>
+              Get started
+              <svg className={styles.arrowIcon} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+            </a>
+            <a href="#" className={styles.speakToSalesBtn}>
+              See Plans
+            </a>
+          </div>
         </div>
+        <div className={styles.heroImageWrapper}>
+          <div className={styles.circlesContainer}>
+            <div className={styles.circle} id={styles.circle1}></div>
+            <div className={styles.circle} id={styles.circle2}></div>
+            <div className={styles.circle} id={styles.circle3}></div>
+            <div className={styles.circle} id={styles.circle4}></div>
+       
+            <div  id={styles.blurOverlay}></div>
+          </div>
+        </div>
+
       </div>
-    </div>
+    </section>
   );
 };
 
