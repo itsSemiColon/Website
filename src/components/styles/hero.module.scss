@@ -1,5 +1,5 @@
 @use "../../assets/styles/variables" as var;
-
+@use "sass:color";
 .heroSection {
   background-color: var.$color-background;
   font-family: var.$font-primary;
@@ -36,8 +36,8 @@
 }
 
 .heroTitle {
-  font-size: 2.25rem;
-  font-weight: 800;
+//   font-size: 2.25rem;
+  font-weight: 500;
   line-height: 1.2;
   max-width: 40rem;
   color: var.$color-heading-light;
@@ -48,7 +48,8 @@
   }
 
   @media (min-width: 1280px) {
-    font-size: var.$font-size-heading-large;
+    font-size: var.$font-size-heading-medium;
+
   }
 }
 
@@ -155,8 +156,8 @@
 }
 
 #circle1 {
-  width: 450px;
-  height: 450px;
+  width: 400px;
+  height: 400px;
   background-color: rgba(249, 191, 59, 0.6);
   top: 5%;
   right: 25%;
@@ -179,7 +180,7 @@
 #circle2 {
   width: 350px;
   height: 350px;
-  background-color: var.$color-deep-accent;
+  background-color: color.adjust(var.$color-deep-accent, $lightness: 25%);
   top: -15%;
   right: 40%;
   z-index: 2;
@@ -201,7 +202,8 @@
 #circle3 {
   width: 450px;
   height: 450px;
-  background-color: var.$color-golden;
+  background-color: color.adjust(var.$color-golden, $lightness: 25%);
+
   right: 1%;
   bottom: 5%;
   z-index: 3;

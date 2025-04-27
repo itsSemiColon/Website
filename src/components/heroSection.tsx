@@ -6,7 +6,7 @@ const HeroSection = () => {
       <div className={styles.heroGrid}>
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>
-          We’re a software development company that helps bring imagination into reality.
+          We are a software development company that helps bringing imagination into reality.
           </h1>
           <p className={styles.heroSubtitle}>
           Let's Architect Your Future, Together. Reliable Tech, Delivered.          </p>

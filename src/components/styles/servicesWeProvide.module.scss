@@ -1,22 +1,25 @@
 @use "../../assets/styles/variables" as var;
 
 .servicesWeProvide {
-  background-color: var.$color-background;
-  font-family: var.$font-primary;
-  padding: 4rem 1rem;
+//   background-color: var.$color-background;
+  background-color: #fefefe;
+    font-family: var.$font-primary;
+    padding: 4rem 1rem;
 
-  .servicesWeProvideContainer {
+.servicesWeProvideContainer {
+    padding-top: 4rem;
     max-width: 1280px;
-    margin: 0 auto;
+    margin: 0 auto;;
+
 
     .heading{
         font-size: 2.25rem;
-        font-weight: 800;
+        font-weight: 500;
         line-height: 1.2;
         max-width: 40rem;
         color: var.$color-heading-light;
         margin: 0 auto;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     
         @media (min-width: 768px) {
             font-size: var.$font-size-heading-medium;
@@ -46,11 +49,19 @@
     align-items: left;
     justify-content: space-evenly;
 
-
+    &:hover {
+        scale: 1.06;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: 0.5s ease-in-out;
+      }
 
     h2 {
       margin-top: 1rem;
       margin-bottom: 0.5rem;
+        color: var.$color-heading-light;
+        font-weight: 500;
+
     }
 
     p {
@@ -73,7 +84,9 @@
   }
 
   .serviceCardEven{
-    background: #fefefec2;
+    border-radius: 2%;
+    background-color: #f1f0f0;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 
   }
 
