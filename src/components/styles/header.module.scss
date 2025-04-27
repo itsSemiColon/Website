@@ -34,6 +34,9 @@ nav {
     border-radius: 0.5rem;
     transition: background-color 0.3s ease;
     z-index: 4;
+    box-shadow: rgb(184, 193, 230) 0px 1px 2px 0px inset, rgba(var.$color-primary, 0.1) 0px 0.706592px 0.706592px -0.583333px, rgba(var.$color-secondary, 0.1) 0px 1.80656px 1.80656px -1.16667px, rgba(var.$color-accent, 0.1) 0px 3.62176px 3.62176px -1.75px,  rgba(var.$color-deep-accent, 0.1) 0px 6.8656px 6.8656px -2.33333px,  rgba(var.$color-golden, 0.1) 0px 13.6468px 13.6468px -2.91667px,  rgba(var.$color-secondary, 0.1) 0px 30px 30px -3.5px;
+    transform: none;
+    transform-origin: 50% 50% 0px;
     &:hover {
       background-color: var.$color-accent;
       cursor: pointer;

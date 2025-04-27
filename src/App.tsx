@@ -1,30 +1,49 @@
-import './App.scss'
+import './App.scss';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/header.tsx';
-import Home from './pages/home.tsx';
-// import Contact from './pages/contact.tsx';
-import Footer from './components/footer.tsx';
-// import Services from './pages/services.tsx';
+import { useEffect, useState } from "react";
+import Loader from './components/loader';
+import Header from './components/header';
+import Home from './pages/home';
+// import Contact from './pages/contact';
+// import Services from './pages/services';
+import Footer from './components/footer';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // fake loading time (e.g., fetching API or preparing page)
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+      <>
+        <Loader />;
+      </>
+    )
+
+    
+  }
 
   return (
     <>
-      {/* setting the router here to load omponenets */}
+      {/* setting the router here to load components */}
       <Router>
         <Header />
-
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/services" element={<Services />} />
-          <Route path="/contact" element={<Contact />} /> */}
+          {/* <Route path="/contact" element={<Contact />} /> */}
+          {/* <Route path="/services" element={<Services />} /> */}
         </Routes>
-
         <Footer />
-    </Router>
-
+      </Router>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
