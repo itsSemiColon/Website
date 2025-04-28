@@ -180,7 +180,8 @@
 #circle2 {
   width: 350px;
   height: 350px;
-  background-color: color.adjust(var.$color-deep-accent, $lightness: 25%);
+  background-color: color.adjust(var.$color-deep-accent, $lightness: 15%);
+  // background-color: color.adjust(var.$color-circle, $lightness: 15%);
   top: -15%;
   right: 40%;
   z-index: 2;
@@ -202,7 +203,7 @@
 #circle3 {
   width: 450px;
   height: 450px;
-  background-color: color.adjust(var.$color-golden, $lightness: 25%);
+  background-color: color.adjust(var.$color-golden, $lightness: 15%);
 
   right: 1%;
   bottom: 5%;
