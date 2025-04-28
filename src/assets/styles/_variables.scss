@@ -1,6 +1,6 @@
 :root {
     --main-margin-left: 300px;
-    --main-padding: 1.5rem;
+    --main-padding: 1rem;
     --main-paadding_left: 0rem;
   }
   
@@ -12,6 +12,10 @@
   .padding-global {
     padding: var(--main-padding);
     padding-left: var(--main-paadding_left);
+  }
+
+  .padding-global-top {
+    padding-top: 1rem;
   }
 
     // fonts
