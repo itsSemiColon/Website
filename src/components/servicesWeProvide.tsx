@@ -79,16 +79,10 @@ const servicesWeProvide = () => {
           </div>
 
           <div className={`${styles.serviceCard}  ${styles.serviceCardEven}`}>
-            <div className={styles.iconWrapper}>
-            <img src={CustomSoftwareIcon} alt='mySvgImage' width={50} />
+            <h2 className="text-3xl  mb-3">Ready to build your next innovative product?</h2>
+            <div className={`${styles.lastCard} text-center w-50 rounded-xl`}>
+              <a href="" className="text-lg font-semibold">Talk to us</a>
             </div>
-            <h2 className="text-3xl  mb-3">User Experience and Design</h2>
-            <p>End-to-end e-commerce development services to scale your online business to new heights.</p>
-            <a href="" className="mt-3 text-lg font-semibold">Learn more
-                            <svg className={styles.arrowIcon} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-              </svg>
-            </a>
           </div>
         </div>
       </div>

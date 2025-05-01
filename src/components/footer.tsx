@@ -5,7 +5,8 @@ const Footer = () => {
     <footer className={styles['footer-wrapper']}>
       <div className={styles['footer-container']}>
         <div className={styles['footer-top']}>
-          <a href="#" className={styles['footer-brand']}>
+          <h2 >Semicolon.<span>io</span></h2>
+          {/* <a href="#" className={styles['footer-brand']}>
           <img
             decoding="async"
             width="100"
@@ -15,7 +16,7 @@ const Footer = () => {
             src="https://framerusercontent.com/images/LtJOacjpCfrAdQJhzULOxsNXP8.png?scale-down-to=512"
             alt=""
           />
-          </a>
+          </a> */}
 
           <ul className={styles['footer-links']}>
             <li><a href="#">Services</a></li>
@@ -28,7 +29,7 @@ const Footer = () => {
         <hr className={styles['footer-divider']} />
 
         <p className={styles['footer-bottom-text']}>
-          © 2023 <a href="#" className={styles['footer-bottom-link']}>Semicolon™</a>. All Rights Reserved.
+          © 2025 <a href="#" className={styles['footer-bottom-link']}>Semicolon™</a>. All Rights Reserved.
         </p>
       </div>
     </footer>
