@@ -4,8 +4,10 @@
   background-color: var.$color-background;
   width: 100%;
   font-family: var.$font-primary;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: background-color 1.5s ease, box-shadow 0.2s ease; // Smooth background and shadow transition
+  position: fixed;
+  background-color: transparent;
+  z-index: 8;
 
   &.scrolled {
     margin-top: 1rem;
@@ -17,7 +19,6 @@
     background-color: var.$color-background; // Greyish-white with slight transparency
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); // Subtle border
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
   }
 
   .padding-global {
@@ -78,19 +79,14 @@
     align-items: center;
     justify-content: center;
     padding: 0.75rem 1.25rem;
-    background-image: linear-gradient(90deg, #121212ba 0%, #ff6600 100%);
-    color: white;
+    // background-image: linear-gradient(90deg, #121212ba 0%, #ff6600 100%);
+    background-color: var.$color-button;
+
+    color: #fefefe;
     font-weight: 500;
     border-radius: 0.5rem;
     transition: background-color 0.3s ease;
     z-index: 6;
-    box-shadow: rgb(184, 193, 230) 0px 1px 2px 0px inset,
-      rgba(var.$color-primary, 0.1) 0px 0.706592px 0.706592px -0.583333px,
-      rgba(var.$color-secondary, 0.1) 0px 1.80656px 1.80656px -1.16667px,
-      rgba(var.$color-accent, 0.1) 0px 3.62176px 3.62176px -1.75px,
-      rgba(var.$color-deep-accent, 0.1) 0px 6.8656px 6.8656px -2.33333px,
-      rgba(var.$color-golden, 0.1) 0px 13.6468px 13.6468px -2.91667px,
-      rgba(var.$color-secondary, 0.1) 0px 30px 30px -3.5px;
 
     &:hover {
       background-color: var.$color-accent;
