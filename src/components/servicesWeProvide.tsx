@@ -1,5 +1,4 @@
 import styles from './styles/servicesWeProvide.module.scss';
-import CustomSoftwareIcon from '../assets/images/icons/custom software-1.svg';
 
 const servicesWeProvide = () => {
   return (
