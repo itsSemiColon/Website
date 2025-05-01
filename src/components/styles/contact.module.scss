@@ -41,14 +41,16 @@
   transition: all 0.3s ease;
 
   &:hover {
-    background-color: var.$color-secondary;
+    background-color: var.$color-button;
     border-color: var.$color-secondary;
+    color: var.$color-background;
+
   }
 
   &.active {
-    background-color: var.$color-primary;
-    color: #ffffff;
-    border-color: var.$color-primary;
+    background-color: var.$color-button;
+    color: var.$color-background;
+    border-color: var.$color-button;
   }
 }
 
@@ -73,8 +75,8 @@
 }
 
 .submit-btn {
-  background-color: var.$color-primary;
-  color: #ffffff;
+  background-color: var.$color-button;
+  color: var.$color-background;
   border: none;
   border-radius: 20px;
   padding: 0.75rem 2rem;
